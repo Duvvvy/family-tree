@@ -1,5 +1,6 @@
-import { NameCard as S } from "./NameCard.style";
+import { NameCardStyle as S } from "./NameCard.style";
 import icon from "../../icons/user-group-solid.svg";
+import { colours } from "../../theme";
 
 export const NameCard = ({
   name,
@@ -9,7 +10,7 @@ export const NameCard = ({
   genderIsFemale: boolean;
 }) => {
   return (
-    <S.Container>
+    <S.Container color={genderIsFemale ? colours.lightPink : colours.lightBlue}>
       <S.Icon>
         <img src={icon} alt="Two people icon" />
       </S.Icon>
