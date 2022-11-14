@@ -1,4 +1,4 @@
-import { NameCard } from "../../components/NameCard/NameCard";
+import TreeLayout from "../../components/TreeLayout/TreeLayout";
 import { TreePageStyle as S } from "./TreePage.style";
 
 export interface TreeNode {
@@ -12,12 +12,7 @@ export interface TreeNode {
 export const TreePage = ({ familyTree }: { familyTree: TreeNode[] }) => {
   return (
     <S.Container>
-      {familyTree.map((node, index) => (
-        <NameCard
-          name={node.name}
-          genderIsFemale={node.gender === "female"}
-        ></NameCard>
-      ))}
+      <TreeLayout />
     </S.Container>
   );
 };
